@@ -26,15 +26,31 @@ CONFIG += c++11
 
 SOURCES += \
         main.cpp \
-        mainwindow.cpp
+    game.cpp \
+    pacman.cpp \
+    map.cpp \
+    dot.cpp \
+    pellet.cpp \
+    ghost.cpp
 
 HEADERS += \
-        mainwindow.h
+    character.h \
+    game.h \
+    pacman.h \
+    map.h \
+    dot.h \
+    item.h \
+    pellet.h \
+    ghost.h
 
-FORMS += \
-        mainwindow.ui
+FORMS +=
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+    src.qrc
+
+DISTFILES +=
