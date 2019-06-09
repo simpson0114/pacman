@@ -53,6 +53,8 @@ Game::Game() {
     mv = new QTimer();
     connect(mv, SIGNAL(timeout()), player, SLOT(move()));
     mv->start(10);
+    if(dotNum == 0)
+        mv->stop();
     show();
 }
 
